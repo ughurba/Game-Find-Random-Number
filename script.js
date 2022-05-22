@@ -28,11 +28,11 @@ document.querySelector('.check').addEventListener('click', function() {
     }
 
 
-  } else if (numberInput < randomNumber) {
+  }else if (numberInput !== randomNumber){
 
     if (score > 1) {
       document.querySelector('.guess-message')
-        .textContent = 'Too little';
+        .textContent = numberInput > randomNumber ? 'Too much!' : 'Too little!'
       score--;
       document.querySelector('.score').textContent = score;
 
@@ -42,23 +42,9 @@ document.querySelector('.check').addEventListener('click', function() {
         .textContent = 'Game Over';
       document.querySelector('.score').textContent = 0;
     }
-
-
-  } else if (numberInput > randomNumber) {
-    if (score > 1) {
-      document.querySelector('.guess-message')
-        .textContent = 'Too much';
-      score--;
-      document.querySelector('.score').textContent = score;
-    } else {
-
-      document.querySelector('.guess-message')
-        .textContent = 'Game Over';
-      document.querySelector('.score').textContent = 0;
-    }
-
 
   }
+
 
 });
 
