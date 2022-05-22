@@ -22,14 +22,34 @@ header {
   position: relative;
   height: 35vh;
   border-bottom: 7px solid #fff;
-}
 
+
+}
+.flex-btn-text{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+}
+@media screen and (max-width: 480px) {
+  .flex-btn-text{
+    justify-content: center;
+  }
+
+}
 main {
   height: 65vh;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+@media screen and (max-width: 460px) {
+  main{
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
 }
 
 .left {
@@ -44,6 +64,14 @@ main {
   width: 50rem;
   font-size: 2rem;
 }
+@media screen and (max-width: 460px) {
+  .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 /* Elements Styles */
 h1 {
@@ -55,7 +83,13 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@media screen and (max-width: 480px) {
+  h1{
+    margin-top: 20px;
+    font-size: 16px;
+  }
 
+}
 .question {
   background: #fff;
   color: #000;
@@ -71,15 +105,16 @@ h1 {
 
 .between {
   font-size: 1.4rem;
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
+  margin: 10px 30px;
+  /*position: absolute;*/
+  /*top: 2rem;*/
+  /*right: 2rem;*/
 }
 
+
 .again {
-  position: absolute;
-  top: 2rem;
-  left: 3rem;
+
+  margin: 10px 30px;
 }
 
 .number-input {
