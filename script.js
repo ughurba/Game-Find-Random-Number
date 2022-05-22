@@ -47,7 +47,7 @@ document.querySelector('.check').addEventListener('click', function() {
   } else if (numberInput !== randomNumber) {
 
     if (score > 1) {
-      document.querySelector('.guess-message').textContent = numberInput > randomNumber ? 'Too much!' : 'Too little!';
+      displayGuessMessage(numberInput > randomNumber ? 'Too much!' : 'Too little!') ;
       score--;
       scoreSize( score) ;
 
